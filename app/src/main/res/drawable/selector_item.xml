@@ -1,0 +1,12 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android" android:width="24dp">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <gradient android:endColor="@color/cardview_shadow_start_color" android:startColor="@color/cardview_shadow_end_color" android:type="linear" />
+            <corners android:radius="1dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+        </shape>
+    </item>
+</selector>
