@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
     private val tvError: View by lazy { findViewById<View>(R.id.tvError) }
+    private val cardViewError: View by lazy { findViewById<View>(R.id.cardViewError) }
 
     private var task: ClearTask? = null
 
@@ -58,7 +59,7 @@ class MainActivity : AppCompatActivity() {
             task = ClearTask()
             task!!.execute(path)
         } else {
-            tvError.visibility = View.VISIBLE
+            cardViewError.visibility = View.VISIBLE
         }
         findViewById<View>(R.id.btn_exit).setOnClickListener { finish() }
     }
@@ -229,7 +230,7 @@ class MainActivity : AppCompatActivity() {
             super.onPostExecute(result)
             progressDialog.dismiss()
             mListView.visibility = if (result) View.VISIBLE else View.GONE
-            tvError.visibility = if (result) View.GONE else View.VISIBLE
+            cardViewError.visibility = if (result) View.GONE else View.VISIBLE
 
         }
 

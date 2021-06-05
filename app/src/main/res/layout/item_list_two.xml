@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/selector_item"
@@ -8,15 +9,36 @@
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
         android:layout_marginRight="5dp"
-        android:src="@drawable/selector_folder" />
+        android:src="@drawable/selector_book" />
 
     <TextView
         android:id="@+id/text1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/icon"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:ellipsize="marquee"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:ignore="EllipsizeMaxLines" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text1"
+        android:layout_alignStart="@id/text1"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentEnd="true"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
 
-</LinearLayout>
+</RelativeLayout>
