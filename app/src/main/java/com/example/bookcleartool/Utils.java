@@ -32,11 +32,4 @@ public class Utils {
         return filePath;
 
     }
-
-    byte b;
-    class abc{
-        abc(){
-            b++;
-        }
-    }
 }
